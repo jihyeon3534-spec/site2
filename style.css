@@ -127,7 +127,7 @@ main .inner{width:1400px; margin:0 auto;
 #statics dd img{border-radius:50%;}
 #statics dd img:hover{box-shadow:0 13px 17.8px 2.2px #0003; }
 
-#online{}
+#online{margin:80px 0 120px;}
 #online h2{font-size:30px; margin-bottom:30px;
   display:flex; justify-content:space-between;}
 #online h2 b{font-weight:bold;}  
@@ -180,12 +180,13 @@ main .inner{width:1400px; margin:0 auto;
   padding:0 20px; height:60px; line-height:60px; color:#000;
   border-radius:32px 0;}
 #community .more img{width:24px; vertical-align:-5px;}  
-#community ul{display:flex; gap:40px;}
+#community ul{display:flex;}
 #community li{width:calc((100% - 40px * 3) / 4);}
 #community li .imgbox{border:1px solid #ddd; border-radius:16px;
   overflow:hidden; transition:all .3s;}
 #community li:hover .imgbox{box-shadow:0 8px 21px #0008;}
-#community img{width:100%; transition:all .3s;}
+#community li img{width:100%; height:240px; transition:all .3s;
+  object-fit:cover;}
 #community li:hover img{transform:scale(1.05);}
 #community .title{margin-top:40px; font-size:22px; font-weight:600;
   color:#000; white-space:nowrap; overflow:hidden;
@@ -193,3 +194,29 @@ main .inner{width:1400px; margin:0 auto;
 #community .info{margin-top:20px;}
 #community .date{font-size:14px; color:#666;}
 #community .subject{margin-left:10px; color:#0e7876; font-weight:bold;}
+#community .community_prev,
+#community .community_next{width:65px; height:65px;
+background:#f4eddd no-repeat center; border-radius:50%;
+box-shadow:0 3px 48.45px 8.55px #000200;
+position:absolute; top:50%; margin-top:-32.px;
+z-index:1;}
+#community .community_prev{left:0;
+  background-image:url(./images/ico-arr-left-green.png);
+}
+#community .community_next{right:0;
+  background-image:url(./images/ico-arr-right-green.png);
+}
+#community .swiper-button-disabled{opacity: 0.3;}
+
+#contribute{width:1400px; margin:0 auto; text-align:center;
+  padding-bottom:120px;}
+#contribute h2{font-size:30px; margin-bottom:20px;}
+#contribute h2 a{width:49px; height:49px; border:1px solid #ccc;
+  background:url("./images/more-plus.png") no-repeat center center;
+  border-radius:50%; font-size:0;}
+#contribute p{font-size:18px; color:#666; margin-bottom:40px; line-height:1.75;}
+#contribute button{width:220px; height:60px;
+  background:var(--main); border:0; border-radius:32px;
+  color:#fff; font-size:18px; font-weight:bold;} 
+#collection ul{display:flex; gap:40px;} 
+#collection li{width:calc((100% - 40px * 3) / 4);}

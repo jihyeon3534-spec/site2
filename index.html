@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header><!--수정--!>
+  <header>
     <div id="link">
       <ul>
         <li><a target="_blank" href="https://www.iksan.go.kr/">익산시청</a></li>
@@ -213,8 +213,9 @@
         <h2>함께 만드는 지도</h2>
         <p class="sub_title">‘어디서나, 누구나’ 익산에 대한 기록을 남길 수 있는 함께 만드는 지도</p>
         <a href="#" class="more">함께 만드는 지도 바로가기 <img src="./images/arrow.svg" alt=""></a>
-        <ul>
-          <li>
+        <div class="swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
             <p class="imgbox"><img src="./images/community_01.png" alt=""></p>
             <p class="title">통고문(通告文)</p>
             <p class="info">
@@ -222,7 +223,7 @@
               <span class="subject">공모전 기록물</span>
             </p>
           </li>
-          <li>
+          <li class="swiper-slide">
             <p class="imgbox"><img src="./images/community_02.png" alt=""></p>
             <p class="title">이길여 박사 영상</p>
             <p class="info">
@@ -230,7 +231,7 @@
               <span class="subject">공모전 기록물</span>
             </p>
           </li>
-          <li>
+          <li class="swiper-slide">
             <p class="imgbox"><img src="./images/community_03.png" alt=""></p>
             <p class="title">1980년대와 90년대 왕궁면 사곡마을 사진</p>
             <p class="info">
@@ -238,7 +239,7 @@
               <span class="subject">공모전 기록물</span>
             </p>
           </li>
-          <li>
+          <li class="swiper-slide">
             <p class="imgbox"><img src="./images/community_04.png" alt=""></p>
             <p class="title">왕궁국민학교 운동회 관련 사진</p>
             <p class="info">
@@ -246,17 +247,73 @@
               <span class="subject">공모전 기록물</span>
             </p>
           </li>
+          <li class="swiper-slide">
+            <p class="imgbox"><img src="./images/community_05.png" alt=""></p>
+            <p class="title">관음사 중창불사 모연문</p>
+            <p class="info">
+              <span class="date">2024-01-04</span>
+              <span class="subject">공모전 기록물</span>
+            </p>
+          </li>
+          <li class="swiper-slide">
+            <p class="imgbox"><img src="./images/community_06.png" alt=""></p>
+            <p class="title">1980년대 이리 대한서림</p>
+            <p class="info">
+              <span class="date">2024-01-04</span>
+              <span class="subject">공모전 기록물</span>
+            </p>
+          </li>
+          <li class="swiper-slide">
+            <p class="imgbox"><img src="./images/community_07.png" alt=""></p>
+            <p class="title">1963년 함라국민학교 제52회 졸업기념사진첩</p>
+            <p class="info">
+              <span class="date">2024-01-04</span>
+              <span class="subject">공모전 기록물</span>
+            </p>
+          </li>
+          <li class="swiper-slide">
+            <p class="imgbox"><img src="./images/community_08.png" alt=""></p>
+            <p class="title">함열향교의 사회활동</p>
+            <p class="info">
+              <span class="date">2024-01-04</span>
+              <span class="subject">공모전 기록물</span>
+            </p>
+          </li>
         </ul>
+          <!-- If we need navigation buttons -->
+          <div class="community_prev"></div>
+          <div class="community_next"></div>
+        </div><!--end:.swiper-->
       </section><!--end:#community-->
     </div><!--end:.community_wrapper-->
-
+    <section id="contribute">
+      <h2><b>명예의 전당</b><a href="#">더보기</a></h2>
+      <ul>
+        <li>
+          <p><img src="./images/contribute_01.PNG"></p>
+          <p>백강흠</p>
+        </li>
+        <li>
+          <p><img src="./images/contribute_02.PNG"></p>
+          <p>이광희</p>
+        </li>
+        <li>
+          <p><img src="./images/contribute_03.PNG"></p>
+          <p>송양석</p>
+        </li>
+        <li>
+          <p><img src="./images/contribute_04.jpeg"></p>
+          <p>교현교회</p>
+        </li>
+      </ul>
+    </section>
 
 
   </main>
 
 
   <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('#main_view.swiper', {
       // Optional parameters
       loop: true,
       effect: "fade",
@@ -273,10 +330,19 @@
 
       // Navigation arrows
       navigation: {
-        nextEl: '.next',
+        nextEl: '.next',//
         prevEl: '.prev',
       },
     }); //swiper 종료
+
+    const swiper2 = new Swiper('#community .swiper', {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      navigation: {
+        nextEl: '.community_next',
+        prevEl: '.community_prev',
+  },
+    });
   </script>
 </body>
 
